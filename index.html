@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Tarjeta de Cumpleaños 🎂</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="wrap" aria-label="Tarjeta interactiva de cumpleaños">
+    <section class="card" id="card">
+      <div class="sparkles" aria-hidden="true"></div>
+
+      <header class="header">
+        <div class="badge" aria-hidden="true">🎉</div>
+        <h1 class="title">
+          ¿Lista para tu sorpresa,
+          VERITO<span id="toName">✨</span> jeje?
+        </h1>
+        <p class="subtitle"></p>
+      </header>
+
+      <figure class="hero" aria-hidden="true">
+        <img src="./assets/cake.webp" alt="" />
+      </figure>
+
+      <div class="question">
+        <p class="q">¿Abrelo aqui?</p>
+        <div class="options">
+          <button id="yes" class="btn yes" type="button">Sí 💛</button>
+          <button id="no" class="btn no" type="button">No 🙈</button>
+        </div>
+        <p class="tiny">Tip: si tocas la tarjeta, empieza la música 🎶</p>
+
+        <div class="tools">
+          <button id="restartBtn" class="link" type="button">Reiniciar ↻</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pantalla final -->
+    <section id="final" class="final" hidden>
+      <div class="final-card">
+        <div class="final-top">
+          <div class="seal" aria-hidden="true">🎁</div>
+          <h2 class="final-title">¡Feliz Cumpleaños, <span id="toName2">✨</span>! 🥳</h2>
+          <p class="final-sub">
+            Hoy celebro tu vida, tu esencia y todo lo bonito que inspiras.
+          </p>
+        </div>
+
+        <div class="letter">
+          <p id="msg1">
+           Amor, hoy le doy gracias a Dios por tu vida. Eres un regalo en mi camino, y oro para que este nuevo año te llene de paz, salud y alegría verdadera.
+          </p>
+          <p id="msg2">
+            Que el Señor guíe tus pasos, cuide tu corazón y te recuerde cada día lo valiosa que eres. Feliz cumpleaños, mi amor. 💛🙏✨
+          </p>
+          <p class="from">
+            Con cariño, <strong id="fromName">Tu vida</strong>
+          </p>
+        </div>
+
+        <div class="final-actions">
+          <button id="moreConfetti" class="btn yes" type="button">Más confetti 🎊</button>
+          <button id="musicBtn" class="btn no" type="button" aria-pressed="false">Música ▶️</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <audio id="audio" loop preload="auto">
+    <source src="./audio/cumple.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+<section id="final" class="final" hidden>
